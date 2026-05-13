@@ -11,7 +11,13 @@ const scores = [
   {이름: "sue", 국어:90, 영어:90, 수학:80, 과학:90},
 ]
 
+const sources = [0, 1, 2, ,3]
+tmp = []
+for (let item of sources){
+  tmp.push(item*2)
+}
 
+sources.map(item=>(item*2))
 
 
 function App() {
