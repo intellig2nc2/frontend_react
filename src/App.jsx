@@ -11,34 +11,38 @@ const scores = [
   {이름: "sue", 국어:90, 영어:90, 수학:80, 과학:90},
 ]
 
-const sources = [0, 1, 2, ,3]
-tmp = []
-for (let item of sources){
-  tmp.push(item*2)
-}
-
-sources.map(item=>(item*2))
 
 
 function App() {
   return (
     <table>
-      {console.log(newScores)}
       <tr>
-        <th>이름</th>
-        <th>국어</th>
-        <th>영어</th>
-        <th>수학</th>
-        <th>과학</th>
+        {
+          Object.keys(scores[0]).map(key=>(
+            <th>{key}</th>
+          ))
+        }
+        
       </tr>
-      {[0, 1, 2, 3].map(idx=>
+      {scores.map(item=>(
+        <tr>
+          {
+            Object.values(item).map(
+              (value) => (<td>{value}</td>)
+            )
+          }
+        </tr>
+          )
+        )
+      }
+      {/* {[0, 1, 2, 3].map(idx=>
         ( <tr>
         <td>{scores[idx].이름}</td>
         <td>{scores[idx].국어}</td>
         <td>{scores[idx].영어}</td>
         <td>{scores[idx].수학}</td>
         <td>{scores[idx].과학}</td>
-      </tr>))}
+      </tr>))} */}
       
     </table>
   )
