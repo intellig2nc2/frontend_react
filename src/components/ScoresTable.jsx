@@ -1,15 +1,9 @@
 import React from 'react'
 
-const scores = [
-  {이름: "John", 국어:90, 영어:90, 수학:80, 과학:90},
-  {이름: "Petter", 국어:90, 영어:90, 수학:80, 과학:90},
-  {이름: "susan", 국어:90, 영어:90, 수학:80, 과학:90},
-  {이름: "sue", 국어:90, 영어:90, 수학:80, 과학:90},
-]
 
-function ScoresTable() {
+
+function ScoresTable({scores}) {
   return (
-    <div>
       <table>
       <tr>
         {
@@ -40,7 +34,6 @@ function ScoresTable() {
       </tr>))} */}
       
     </table>
-    </div>
   )
 }
 
